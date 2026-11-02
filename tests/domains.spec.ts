@@ -36,3 +36,16 @@ test("Search Bar submit domain test", async ({ page }) => {
 
   await expect(page).toHaveURL(/daniksm/);
 });
+
+test("First widget displays searched domain daniksm.com", async ({ page }) => {
+  await page.goto("https://www.wix.com/domains");
+
+  const searchBar = page.locator(domainsLocators.searchBar).nth(1);
+  const searchButton = page.locator(domainsLocators.searchButton).nth(1);
+
+  await searchBar.pressSequentially("daniksm.com");
+  await searchButton.click();
+
+  const firstWidgetTitle = page.locator(domainsLocators.widgetTitle).first();
+  await expect(firstWidgetTitle).toHaveText("daniksm.com");
+});

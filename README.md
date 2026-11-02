@@ -2,8 +2,7 @@
 
 - **Run tests with the following commands:**
 - npx playwright test
-  Run tests with visible browser
-- npx playwright test --headed
+- npx playwright test --headed (run tests with visible browser)
 
 ## If I had another week
 

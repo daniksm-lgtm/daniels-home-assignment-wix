@@ -1,6 +1,6 @@
 # daniels-home-assignment-wix
 
-**Total Time Spent** : ~ 4.5 hours
+**Total Time Spent** : ~ 4 hours
 
 - **Run tests with the following commands:**
 - npx playwright test
